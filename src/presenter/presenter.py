@@ -1,7 +1,5 @@
 from core.domain.word import Word
 from typing import List
-from presenter.cli_presenter import CliPresenter
-
 
 class Presenter():
     def __init__(self):
@@ -18,8 +16,3 @@ class Presenter():
 
     def get_input_from_client(self, data: str) -> str:
         pass
-
-class PresenterFactory():
-    @staticmethod
-    def get_presenter():
-        return CliPresenter()
