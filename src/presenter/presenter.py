@@ -5,7 +5,7 @@ class Presenter():
     def __init__(self):
         pass
 
-    def present_text(self, text) -> None:
+    def present_text(self, text, prompt=True) -> None:
         pass
 
     def present_list_of_texts(self, texts: List[str]) -> None:
