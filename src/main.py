@@ -3,8 +3,10 @@ from presenter.presenter_factory import PresenterFactory
 from adapter.translator_adapter_factory import TranslatorAdapterFactory
 from core.service.translate_service import TranslatorService
 from core.domain.word import Word
+from sys import argv
 
 COMMANDS = [("translate","Interactive translation in the terminal."), ("help","Help command for detailed descriptions of all available commands and etc.")]
+
 
 def interactive_translate(presenter: Presenter, translator_service: TranslatorService):
     presenter.present_text("Here are all the possible input languages: ")
@@ -29,18 +31,21 @@ def init():
     presenter = PresenterFactory.get_presenter()
     translator_adapter = TranslatorAdapterFactory.get_translator()
     translator_service = TranslatorService(translator_adapter, presenter)
-    presenter.present_text("Welcome to Translate like a Hacker!")
-    presenter.present_text("####################################", False)
-    presenter.present_text("", False)
-    presenter.present_text("Here you will be able to translate languages like a real Hacker!")
-    show_commands(presenter)
-    while True:
-        res = presenter.get_input_from_client("")
-        if res.lower() == "exit":
-            break
-        if res.lower() == "translate":
-            interactive_translate(presenter, translator_service)
-    presenter.present_text("Good bye ;)")
+    if len(argv) > 1:
+        translator_service.translate_word(Word(argv[1], "English"), ["Georgian"], True)
+    else:
+        presenter.present_text("Welcome to Translate like a Hacker!")
+        presenter.present_text("####################################", False)
+        presenter.present_text("", False)
+        presenter.present_text("Here you will be able to translate languages like a real Hacker!")
+        show_commands(presenter)
+        while True:
+            res = presenter.get_input_from_client("")
+            if res.lower() == "exit":
+                break
+            if res.lower() == "translate":
+                interactive_translate(presenter, translator_service)
+        presenter.present_text("Good bye ;)")
 
 
 if __name__ == '__main__':
