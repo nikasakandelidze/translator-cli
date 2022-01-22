@@ -9,6 +9,12 @@ At the moment it only supports from English ---> Georgian translation, but the c
 	-  if you issue command `translate grotasque` app will display message: " Spelling of 'grotasque' is not correct. Autocorrecting it to 'groteqsue'. 
 
 # Usage
+Usage of the application is two step process:
+- Setup
+- Run
+### Setup
+To install all the dependencies run: `pip install -r requirements.txt`
+### Run
 Currently the most useful way i found myself using thi cli is by using it for "One shot translation".
 Example:
 - python path/to/main.py grotesque 
