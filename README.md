@@ -19,9 +19,8 @@ Currently the most useful way i found myself using thi cli is by using it for "O
 Example:
 - python path/to/main.py grotesque 
 and it returns several contextual results in georgian.
-Since its pain in the XXX to every time locate to the main.py in the hirerchy of your computers folders i on my pc ( MAC ) created an alias in shell profile to map custom translate command to it.
 
-Example:
+Since its pain in the XXX to every time locate to the main.py in the hirerchy of your computers folders i on my pc ( MAC ) created an alias in shell profile to map custom translate command to it:
 - For python3 and zshell(MAC) `echo "alias translate=python3 path/to/src/main.py" >> ~/.zshrc`
 - For python3 and bash(Ubuntu) `echo "alias translate=python3 path/to/src/main.py" >> ~/.bashrc`
 - For python and zshell(MAC) `echo "alias translate=python path/to/src/main.py" >> ~/.zshrc`
