@@ -32,7 +32,7 @@ After executing one of the commands restart the terminal session( close and reop
 Application uses clearly seperated layers and modules following mostly clean architecture.
 
 ### Architecture
-![Architecture diagram](./assets/architecture.jpeg)
+![Architecture diagram](./assets/arch.png)
 
 Architecture used in this app is described pretty fully in the diagram. Basic idea is that there is core package/module which doesn't have any dependency on any concrete implementation module or library except core python.
 There are thee main parts/modules of the program at the moments: Core, Adapters, Presenter
