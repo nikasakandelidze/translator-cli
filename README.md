@@ -5,7 +5,8 @@ At the moment it only supports from English ---> Georgian translation, but the c
 
 # Current Features
 - Translate words from english to georgian snap fast
-- Auto correct misspelled words and find correct translations. Like: if you issue command `translated grotasque` app will display message Spelling of "grotasque" is not correct. Autocorrecting it to "groteqsue" 
+- Auto correct misspelled words and find correct translations:
+	-  if you issue command `translate grotasque` app will display message: " Spelling of 'grotasque' is not correct. Autocorrecting it to 'groteqsue'. 
 
 # Usage
 Currently the most useful way i found myself using thi cli is by using it for "One shot translation".

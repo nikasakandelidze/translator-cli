@@ -16,8 +16,8 @@ class TranslatorService():
         word, corrected_word = correct_word_spelling(input_word.word)
         if word != corrected_word:
             input_word.word = corrected_word
-            self.presenter.present_text(f"### Spelling of: {input_word.word} is not correct. Autocorrecting it "
-                                        f"to: {corrected_word} ###")
+            self.presenter.present_text(f"### Spelling of: '{input_word.word}' is not correct. Autocorrecting it "
+                                        f"to: '{corrected_word}' ###")
         try:
             if not input_word:
                 return
