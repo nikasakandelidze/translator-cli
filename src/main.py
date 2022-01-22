@@ -1,6 +1,6 @@
 from presenter.presenter import Presenter
 from presenter.presenter_factory import PresenterFactory
-from adapter.translator_adapter_factory import TranslatorAdapterFactory
+from adapter.translator.translator_adapter_factory import TranslatorAdapterFactory
 from core.service.translate_service import TranslatorService
 from core.domain.word import Word
 from sys import argv

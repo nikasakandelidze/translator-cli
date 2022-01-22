@@ -2,7 +2,7 @@ from typing import List
 import requests
 import json
 from core.domain.word import Word
-from adapter.translator_adapter import TranslatorAdapter
+from adapter.translator.translator_adapter import TranslatorAdapter
 from core.domain.translation_result import TranslationResult
 
 BASE_URL_OF_RESOURCE = 'https://translate.ge/api/{route}'

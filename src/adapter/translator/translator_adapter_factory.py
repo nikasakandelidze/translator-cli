@@ -1,5 +1,5 @@
-from adapter.translator_adapter import TranslatorAdapter
-from adapter.web_adapter import WebTranslatorAdapter
+from adapter.translator.translator_adapter import TranslatorAdapter
+from adapter.translator.web_adapter import WebTranslatorAdapter
 
 
 class TranslatorAdapterFactory():

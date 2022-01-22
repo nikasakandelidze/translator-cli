@@ -3,6 +3,10 @@ I bumped upon the problem of overhead when trying to translate some words i coul
 cli-translator is a command line interface program which uses some web HTTP api-s under the hood to translate words from SOURCE to TARGET languages.
 At the moment it only supports from English ---> Georgian translation, but the code is written in a way to be able to easily  add as many language features as possible and wanted.
 
+# Current Features
+- Translate words from english to georgian snap fast
+- Auto correct misspelled words and find correct translations. Like: if you issue command `translated grotasque` app will display message Spelling of "grotasque" is not correct. Autocorrecting it to "groteqsue" 
+
 # Usage
 Currently the most useful way i found myself using thi cli is by using it for "One shot translation".
 Example:
