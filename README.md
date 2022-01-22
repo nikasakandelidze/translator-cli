@@ -31,3 +31,5 @@ After executing one of the commands restart the terminal session( close and reop
 # Technical details
 Application uses clearly seperated layers and modules following mostly clean architecture.
 
+### Architecture
+![Architecture diagram](./assets/architecture.png)
