@@ -6,4 +6,4 @@ def correct_word_spelling(word):
         return word
     spell = Speller()
     corrected_word = spell(word)
-    return (word, corrected_word)
+    return word, corrected_word

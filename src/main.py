@@ -1,6 +1,7 @@
 from presenter.presenter import Presenter
 from presenter.presenter_factory import PresenterFactory
 from adapter.translator.translator_adapter_factory import TranslatorAdapterFactory
+from adapter.persister.data_persister_factory import DataPersisterFactory
 from core.service.translate_service import TranslatorService
 from core.domain.word import Word
 from sys import argv
@@ -29,8 +30,9 @@ def show_commands(presenter: Presenter):
 
 def init():
     presenter = PresenterFactory.get_presenter()
+    storage = DataPersisterFactory.get_persister()
     translator_adapter = TranslatorAdapterFactory.get_translator()
-    translator_service = TranslatorService(translator_adapter, presenter)
+    translator_service = TranslatorService(translator_adapter, presenter, storage)
     if len(argv) > 1:
         translator_service.translate_word(Word(argv[1], "English"), ["Georgian"], True)
     else:
