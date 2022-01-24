@@ -22,6 +22,6 @@ class WebTranslatorAdapter(TranslatorAdapter):
             translated_word_data = word['value']
             context = translated_word_data['Word']
             word = translated_word_data['Text']
-            output_words.append(Word(word, language, context))
+            output_words.append(Word(word.replace('\n', ' ') , language, context))
         input_word = Word(word,  "English")
         return TranslationResult(input_word, output_words)

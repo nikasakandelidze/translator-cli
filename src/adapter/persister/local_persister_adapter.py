@@ -20,7 +20,8 @@ class LocalPersisterAdapter(DataPersister):
             if self.search(input_word, output_word.language):
                 return
             with open(LOCAL_FOLDER_PATH, 'a+', encoding='utf-8') as f:
-                f.write(f"{input_word.language}:{input_word.word}:{output_word.language}:{output_word.word}\n")
+                content = f"{input_word.language}:{input_word.word}:{output_word.language}:" + output_word.word.replace('\r',' ')+'\n'
+                f.write(content)
         except Exception:
             pass
 
